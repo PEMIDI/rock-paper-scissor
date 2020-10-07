@@ -1,3 +1,5 @@
+
+
 score_board = {
     'user_score' : 0,
     'system_score' : 0
@@ -25,9 +27,4 @@ GAME_MODES = ('r', 'p', 's')
 
 #     return user_choice and system_choice
 
-def game_ended(user_score, system_score):
-
-    if score_board['user_score'] > 3 or score_board['system_score'] > 3:
-        score_board['user_score'] = 0
-        score_board['system_score'] = 0 
         
