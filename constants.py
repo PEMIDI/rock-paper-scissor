@@ -4,8 +4,7 @@ score_board = {
     'user_score' : 0,
     'system_score' : 0
 }
-score_board['user_score'] += 1
-print(score_board)
+
 
 GAME_RULES = {
     ('p', 'r') : 'user',
@@ -18,13 +17,5 @@ GAME_RULES = {
 
 GAME_MODES = ('r', 'p', 's')
 
-# def user_currect_input(user_choice, system_choice):
-#     if user_choice in GAME_MODES:
-#         user_choice = True
-
-#     if system_choice in GAME_MODES:
-#         system_choice = True
-
-#     return user_choice and system_choice
 
         

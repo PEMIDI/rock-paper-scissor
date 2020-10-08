@@ -1,6 +1,7 @@
 from random import choice
 from constants import GAME_RULES, GAME_MODES
 
+
 def get_choice():
     
     user_choice = input('Make a choice :  r/p/s\n')
@@ -47,6 +48,3 @@ def refresh_score_board(score_board, winner,play):
     }
    
 
-
-
-    
