@@ -2,13 +2,17 @@ from datetime import datetime
 
 def timer(func):
 
-    def wrapper():
+    def wrapper(*args, **kwargs):
         start_time = datetime.now()
-        func()
+        result = func(args, **kwargs)
         end_time = datetime.now()
         duration = end_time - start_time
-        print(f" duration : {duration.seconds // 3600}:{duration.seconds // 60}:"
-              f"{duration.seconds % 60}")
+        hours = duration.seconds // 3600
+        minutes = duration.seconds // 60
+        seconds = duration.seconds % 60
+        print(f" duration : {hours}:{minutes}:"f"{seconds}")
+
+        return result
 
     return wrapper
 
