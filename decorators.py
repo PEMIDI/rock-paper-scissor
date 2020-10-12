@@ -4,7 +4,7 @@ def timer(func):
 
     def wrapper(*args, **kwargs):
         start_time = datetime.now()
-        result = func(args, **kwargs)
+        result = func(*args, **kwargs)
         end_time = datetime.now()
         duration = end_time - start_time
         hours = duration.seconds // 3600

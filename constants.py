@@ -2,7 +2,9 @@
 
 score_board = {
     'user_score' : 0,
-    'system_score' : 0
+    'system_score' : 0,
+    'play' : True,
+    'game_ending' : False
 }
 
 

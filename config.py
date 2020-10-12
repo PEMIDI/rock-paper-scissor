@@ -1,5 +1,6 @@
 from random import choice
-from constants import GAME_RULES, GAME_MODES
+from constants import GAME_RULES, score_board, GAME_MODES
+
 
 
 def get_choice():
@@ -24,15 +25,14 @@ def who_is_won(user_choice, system_choice):
     return 'Draw!'
     
 
-def refresh_score_board(score_board, winner,play):
+def refresh_score_board(score_board, winner):
     Play = True
     if score_board['user_score'] >= 3 or score_board['system_score'] >= 3:
+        score_board['play'] = False
         score_board['user_score'] = 0
         score_board['system_score'] = 0
-        return {
-            'score_board' : score_board,
-            'play' : False
-        } 
+
+        return score_board
 
     if winner == 'user':
         score_board["user_score"] += 1
@@ -40,11 +40,12 @@ def refresh_score_board(score_board, winner,play):
 
     elif winner == 'system':
         score_board["system_score"] += 1
+        return score_board
         # print(score_board["system_score"]) 
     
-    return {
-        'score_board' : score_board,
-        'play' : True
-    }
-   
+
+
+
+
+
 
