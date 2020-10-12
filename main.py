@@ -1,7 +1,8 @@
 from config import get_choice, who_is_won, refresh_score_board
 from constants import score_board
+from decorators import timer
 
-
+@timer
 def rock_paper_scissor():
         play = True
         while play:
